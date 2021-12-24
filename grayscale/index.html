@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" type="image/png" href="../favicon.png" />
+  <link rel="stylesheet" href="style.css">
+  <title>Grayscale</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1 class="brand">Grayscale</h1>
+      <a href="/">Home</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="description">
+      <h2>From the <strong>color image</strong> makes the <strong>image in the gray tones</strong> for each pixel</h2>
+
+      <p>
+        When you <strong>hover</strong> the mouse over the image, you get a <strong>color image</strong>. <br>
+        When you <strong>leave</strong> the picture with the mouse cursor, the image becomes again in <strong>gray
+          tones</strong>.
+      </p>
+    </section>
+
+    <section class="img-container">
+      <img src="../images/22.jpg" class="grayscale">
+      <img src="../images/307600.jpg" class="grayscale">
+      <img src="../images/33.jpg" class="grayscale">
+      <img src="../images/SHo6Fub.jpg" class="grayscale">
+      <!-- <img src="https://i.imgur.com/CLRVnVD.png" class="grayscale"> -->
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <span>Content © {} Dmitry Polyakov</span>
+  </footer>
+
+  <script>
+    console.log(location.href, location.host);
+    let footerDate = (new Date()).getFullYear();
+    let footerSpan = document.querySelector('footer span');
+    footerSpan.textContent = footerSpan.textContent.replace('{}', footerDate);
+  </script>
+  <script src="./grayscale.js" defer></script>
+</body>
+
+</html>

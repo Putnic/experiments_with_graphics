@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" type="image/png" href="../favicon.png" />
+  <link rel="stylesheet" href="css/main.css" />
+  <title>Image Splitter</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1 class="brand">Image Splitter</h1>
+      <a href="/">Home</a>
+    </div>
+  </header>
+
+  <main class="container center">
+    <section class="description">
+      <h2>Divides an <strong>image</strong> into separate DOM elements that can be <strong>manipulated
+          independently</strong> from each other</h2>
+
+      <p>Enter in
+        <b>X</b> and
+        <b>Y</b> fields quantity of parts you want to divide the image to and press "SPLIT".</p>
+    </section>
+
+    <section class="img-container center">
+      <!-- FORM -->
+      <form>
+        <label>
+          x (from 1 to 70):
+          <input type="number" name="x" min="1" max="50" placeholder="number">
+        </label>
+        <label>
+          y (from 1 to 70):
+          <input type="number" name="y" min="1" max="100" placeholder="number">
+        </label>
+        <button class="btn tooltip-top" data-btn="split" data-tooltip="divides the image">
+          SPLIT
+        </button>
+      </form>
+
+      <!--Image to devide-->
+      <div class="img-devide center">
+        <img class="responcive" id="img" src="../images/22.jpg">
+      </div>
+
+      <!--BUTTONS-->
+      <div class="btn-group center">
+        <button class="btn mix" data-btn="mix">MIX</button>
+        <button class="btn sort" data-btn="sort">SORT</button>
+      </div>
+    </section>
+
+    <section class="img-container center">
+      <!-- FORM -->
+      <form>
+        <label>
+          x (from 1 to 70):
+          <input type="number" name="x" min="1" max="100" placeholder="number">
+        </label>
+        <label>
+          y (from 1 to 70):
+          <input type="number" name="y" min="1" max="100" placeholder="number">
+        </label>
+        <button class="btn tooltip-top" data-btn="split" data-tooltip="divides the image">
+          SPLIT
+        </button>
+      </form>
+
+      <!--Image to devide-->
+      <div class="img-devide center">
+        <img class="responcive" id="img1" src="../images/33.jpg">
+      </div>
+
+      <!--BUTTONS-->
+      <div class="btn-group center">
+        <button class="btn mix" data-btn="mix">MIX</button>
+        <button class="btn sort" data-btn="sort">SORT</button>
+      </div>
+    </section>
+    <a class="btn" id="download" href="scripts/imgSplitter.js" target="_blamk">DOWNLOAD PLUGIN</a>
+  </main>
+
+  <footer class="footer">
+    <span>Content © {} Dmitry Polyakov</span>
+  </footer>
+
+  <script>
+    console.log(location.href, location.host);
+    let footerDate = (new Date()).getFullYear();
+    let footerSpan = document.querySelector('footer span');
+    footerSpan.textContent = footerSpan.textContent.replace('{}', footerDate);
+  </script>
+  <script type="text/javascript" src="./scripts/imgSplitter.js" defer></script>
+  <script type="text/javascript" src="./scripts/main.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>Experiments with graphics</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <a href="https://putnic.github.io/" class="brand">Dmitry Polyakov</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Experiments with graphics:</h2>
+
+    <a target="_blank" href="./grayscale/index.html">Grayscale</a>
+    <p>From the
+      <strong>color image</strong> makes the
+      <strong>image in the gray tones</strong> for each pixel.</p>
+
+    <a target="_blank" href="./imageSplit/index.html">Image Splitter</a>
+    <p> The
+      <strong>Image Splitter</strong> divides an
+      <strong>image</strong> into separate DOM elements that can be
+      <strong>manipulated independently</strong> from each other.
+    </p>
+
+    <a target="_blank" href="./paintjs/index.html">Paintjs</a>
+    <p>
+      <strong>Drawing</strong> with the mouse on the <strong>canvas</strong>
+    </p>
+  </main>
+
+  <footer class="footer">
+    <span>Content © {} Dmitry Polyakov</span>
+  </footer>
+
+
+  <script>
+    console.log(location.href, location.host);
+    let footerDate = (new Date()).getFullYear();
+    let footerSpan = document.querySelector('footer span');
+    footerSpan.textContent = footerSpan.textContent.replace('{}', footerDate);
+  </script>
+
+</body>
+
+</html>

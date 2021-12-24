@@ -1,0 +1,340 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background: #384047;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  color: #000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+header h1 {
+  margin: 0;
+  text-align: center;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #4caf50;
+}
+
+header a {
+  color: #4f5151;
+  font-weight: bold;
+  text-decoration: none;
+
+  padding: 14px 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+header a:hover {
+  color: black;
+  background-color: #ddd;
+}
+
+header .brand {
+  font-size: 1.7rem;
+}
+/* End header */
+
+#app {
+  max-width: 95%;
+  height: 95vh;
+  margin: auto;
+
+  color: #384047;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  height: 80%;
+  margin: 50px auto 10px;
+}
+
+canvas {
+  position: relative;
+  width: 90%;
+  height: 100%;
+  background: #fff;
+  display: block;
+  border-radius: 5px;
+  box-shadow: 0 4px 0 0 #222;
+  cursor: url(../img/cursor.png), crosshair;
+}
+
+/* Color Palette */
+#color-palette {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0px 10px;
+  text-align: center;
+}
+
+.color-palette__color {
+  height: 48px;
+  width: 48px;
+  margin-bottom: 8px;
+  border-radius: 60px;
+  cursor: pointer;
+  border: 0;
+  box-shadow: 0 3px 0 0 #222;
+}
+
+.color-palette__color.selected {
+  border: 4px solid #fff;
+  width: 40px;
+  height: 40px;
+}
+/* Color Palette  End*/
+
+/* Button */
+button {
+  height: 48px;
+  width: 48px;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 0 0 #b7b7b7;
+  color: #384047;
+}
+
+button:hover {
+  background-color: #b7b7b7;
+}
+
+.material-icons {
+  font-size: 35px;
+}
+
+button:hover .material-icons {
+  font-weight: bold;
+  color: #000;
+}
+/* End Button */
+
+/* Controls */
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls button {
+  margin-right: 8px;
+  border-radius: 100%;
+}
+
+#brush-size-slider {
+  height: 15px;
+  border-radius: 5px;
+}
+
+#brush-size-slider::-webkit-slider-thumb {
+  border-radius: 50%;
+}
+
+#brush-size-slider::-moz-range-thumb {
+  border-radius: 50%;
+}
+
+span.brush-size {
+  color: white;
+  font-size: 0.8rem;
+  padding-left: 10px;
+  width: 2rem;
+}
+/* End Controls */
+
+/* Color Picker */
+.color-picker {
+  position: relative;
+  background-color: #fefefe;
+  margin: 5% auto;
+  border: 1px solid #888;
+  border-radius: 5px;
+  width: 40%;
+  padding: 20px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.color-picker__preview {
+  width: 80px;
+  height: 80px;
+  border-radius: 3px;
+  float: left;
+  margin: 10px 10px 10px 10px;
+}
+
+.color-picker__sliders {
+  float: right;
+  width: 70%;
+}
+
+.color-picker__sliders input {
+  height: 25px;
+}
+
+.color-picker__controls {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 16px;
+}
+
+.color-picker__controls button:hover {
+  font-weight: bold;
+  background-color: #b7b7b7;
+}
+/* End Color Picker */
+
+/* The slider range */
+label.slider {
+  display: block;
+  font-size: 0.6rem;
+}
+
+/* The slider itself */
+label.slider input {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+/* Mouse-over effects */
+label.slider input:hover {
+  opacity: 1;
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+label.slider input::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #15df1d;
+  cursor: pointer; /* Cursor on hover */
+}
+
+label.slider input::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #15df1d; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+/* The end slider range */
+
+/* Modal window */
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+}
+
+/* Modal Header */
+.modal-header {
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 2px 16px;
+}
+
+/* The Close Button */
+.modal-close {
+  float: right;
+  cursor: pointer;
+  font-size: 35px;
+}
+
+/* Close button on hover */
+.modal-close:hover,
+.modal-close:focus {
+  font-weight: bold;
+  color: #000;
+  background-color: red;
+}
+
+/* Modal Body */
+.modal-body {
+  padding: 2px 16px;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Footer */
+footer {
+  padding: 10px 0;
+  color: #4f5151;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background-color: #f1f1f1;
+}

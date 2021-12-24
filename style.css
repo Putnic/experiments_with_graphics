@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  color: #000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+
+header {
+  width: 100%;
+  background-color: #f1f1f1;
+  padding: 0 10px;
+}
+
+header .container {
+  border-bottom: 1px solid #4CAF50;
+}
+
+header a {
+  color: #4F5151;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+header a:hover {
+  color: black;
+}
+
+header .brand {
+  font-size: 1.7rem;
+}
+
+/* Style main content */
+
+main.container {
+  padding: 10px;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  min-height: 90vh;
+}
+
+/* Footer */
+
+footer {
+  height: 40px;
+  color: #4F5151;
+  text-align: center;
+  line-height: 40px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background-color: #f1f1f1;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Style buttons */
+
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Darker background on mouse-over */
+
+.btn:hover {
+  background-color: RoyalBlue;
+}

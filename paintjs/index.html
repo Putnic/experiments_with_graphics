@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>PaintJS</title>
+	<link rel="shortcut icon" type="image/png" href="../favicon.png" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<header>
+		<div class="container">
+			<h1 class="brand">PaintJS</h1>
+			<a href="/">Home</a>
+		</div>
+	</header>
+
+	<div id="app">
+		<div class="row">
+			<canvas id="canvas"></canvas>
+			<ul id="color-palette" title="Select brush color"></ul>
+		</div>
+
+		<div class="controls">
+			<!-- <input type="color" name="favcolor" value="#ff0000"> -->
+			<!-- Button to open the modal login form -->
+			<button id="new-color-button" title="Add new color">
+				<i class="material-icons">palette</i>
+			</button>
+
+			<button id="clear-canvas-button" title="Clear canvas">
+				<i class="material-icons">clear</i>
+			</button>
+			<label for="brush-size-slider" class="slider">
+				<input type="range" id="brush-size-slider" min="1" max="40" value="1" title="Brush size">
+			</label><span class="brush-size"></span>
+		</div>
+	</div>
+
+	<footer class="footer">
+		<span>Content © {} Dmitry Polyakov</span>
+	</footer>
+
+	<!-- The Modal -->
+	<div id="color-picker" class="modal">
+		<!-- Modal Content -->
+		<div class="color-picker animate">
+			<i class="material-icons modal-close" title="close">clear</i>
+			<div class="modal-header">
+				<h2>Панель выбора цвета</h2>
+			</div>
+			<div class="modal-body clearfix">
+				<span class="color-picker__preview"></span>
+
+				<div class="color-picker__sliders">
+					<label for="red" class="slider">Red: <span></span>
+						<input type="range" id="red" class="color-picker__slider" name="red" min="0" max="255" value="0">
+					</label>
+
+					<label for="green" class="slider">Green: <span></span>
+						<input type="range" id="green" class="color-picker__slider" name="green" min="0" max="255" value="0">
+					</label>
+
+					<label for="blue" class="slider">Blue: <span></span>
+						<input type="range" id="blue" class="color-picker__slider" name="blue" min="0" max="255" value="0">
+					</label>
+				</div>
+			</div>
+			<div class="color-picker__controls">
+				<button class="color-picker__add-button" title="add color">
+					<i class="material-icons">check</i>
+				</button>
+				<button class="color-picker__close-button" title="close">
+					<i class="material-icons">clear</i>
+				</button>
+			</div>
+		</div>
+	</div>
+	<!-- End the Modal -->
+
+	<script>
+		console.log(location.href, location.host);
+		let footerDate = (new Date()).getFullYear();
+		let footerSpan = document.querySelector('footer span');
+		footerSpan.textContent = footerSpan.textContent.replace('{}', footerDate);
+	</script>
+	<script src="js/color-palette.js" defer></script>
+	<script src="js/color-picker.js" defer></script>
+	<script src="js/app.js" defer></script>
+	<script src="js/index.js" defer></script>
+</body>
+
+</html>
